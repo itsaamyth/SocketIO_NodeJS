@@ -62,6 +62,11 @@ io.on('connection',(socket)=>{
     // setInterval(()=>{
     //     socket.emit('whizz')
     // },2000)
+    console.log("Socket created :" + socket.id)
+
+    socket.on('play', function(data) {
+        io.emit('play', data)
+    })
 
 })
 
